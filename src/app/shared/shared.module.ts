@@ -4,12 +4,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { InputComponent } from './components/input/input.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
+import { routes } from '../pages/pages.routing';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   declarations: [
     InputComponent,

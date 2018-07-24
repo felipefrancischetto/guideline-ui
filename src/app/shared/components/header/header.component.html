@@ -1,13 +1,40 @@
-<nav class="navbar navbar-light bg-light">
+<!-- <nav class="navbar navbar-light bg-light">
   <div class="">{{ headerMessage }}</div>
   <div class="title">{{ title }}</div>
   <div class="sub-title">{{ subTitle }}</div>
-  <button class="button-secundary" routerLink="['/']">
+  <a class="button-secundary" routerLink="['/']">
     <i class="fa fa-arrow-left"></i>
     Back to Index
-  </button>
-</nav>
+  </a>
+</nav> -->
 
+
+<header class="main-header">
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <b>UI Guidelines.</b>
+      </div>
+      <button class="button-secundary" routerLink="['/']">
+        <i class="fa fa-arrow-left"></i>
+        Back to Index
+      </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active">
+            <a [routerLink]="['/restaurants']">Restaurantes</a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/about']">Sobre</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+</header>
 
 
 

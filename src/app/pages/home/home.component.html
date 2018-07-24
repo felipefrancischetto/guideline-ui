@@ -1,1 +1,5 @@
-<h1>Home</h1>
+<div class="container">
+  <h6 *ngFor="let page of pages; let i = index">
+    {{ i + 1 + '. '+ page.title }}
+  </h6>
+</div>

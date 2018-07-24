@@ -1,18 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PagesComponent } from './pages.component';
+import { HomeComponent } from './home/home.component';
+import { TextFieldComponent } from './text-field/text-field.component';
+import { TypographyComponent } from './typography/typography.component';
 
 export const routes: Routes = [
-  {
-    path: 'pages',
-    component: PagesComponent,
-    children: [
-      { path: '', loadChildren: './home/home.module#HomeModule' },
-      { path: 'text-field', loadChildren: './text-field/text-field.module#TextFieldModule' },
-      { path: 'typography', loadChildren: './typography/typography.module#TypographyModule'},
-    ]
-  }
+  { path: '', component: HomeComponent  },
+  { path: 'text-field', component: TextFieldComponent },
+  { path: 'typography', component: TypographyComponent },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);
